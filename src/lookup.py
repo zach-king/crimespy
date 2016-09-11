@@ -19,4 +19,7 @@ for crime in data:
     if crime['category'] != 'shoplifting':
         continue
     print('-' * 100)
-    print(crime)
+    print('Crime: shoplifting')
+    print('Street: ' + crime['location']['street']['name'])
+    print('Location: (' + str(crime['location']['latitude']) + ', ' + str(crime['location']['longitude']) + ')')
+    print('Outcome: (' + crime['outcome_status']['date'] + ') ' + crime['outcome_status']['category'])
